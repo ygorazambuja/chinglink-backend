@@ -1,0 +1,18 @@
+Categoria
+
+    Post(/) Adicionar Categoria (Categoria Categoria)
+    Get(/) Lista Todas Categorias (List<Categorias> categorias)
+    Get(/id) Busca Categoria (id) (Categoria categoria)
+    Delete(/id) Deleta Categoria (void)
+    Put(/)(Categoria categoria) Atualiza Categoria (Categoria categoriaAtualizada)
+ 
+
+Produto
+
+    Post(/) Adiciona Produto sem Categorias(Produto produto)
+    Get(/id) Busca Produto (id) (Produto produto)
+    Post(/categorias) adiciona produto com categorias
+    Get(/) Lista todos os produtos (List<Produto> produtos)
+    Post(/designarCategorias)(Produto produto) designa Categorias para o produto (Produto produtoAtualizado)
+    Delete(/id) Deleta o Produto com o id tal
+    Put(/)(Produto produto) atualiza o produto
