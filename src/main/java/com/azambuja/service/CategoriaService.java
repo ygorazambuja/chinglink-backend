@@ -41,7 +41,8 @@ public class CategoriaService {
 
     public Categoria update(Categoria categoriaSerAtualizada) {
         Categoria categoriaAtualizada = categoriaRepository.save(categoriaSerAtualizada);
-        return categoriaRepository.save(categoriaAtualizada);
+//        return categoriaRepository.save(categoriaAtualizada);
+        return categoriaAtualizada;
     }
 
 }

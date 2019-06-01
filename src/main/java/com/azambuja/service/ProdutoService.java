@@ -32,12 +32,18 @@ public class ProdutoService {
     }
 
     public void deletarPorId(Integer id) {
+        // Optional<Produto> produto = produtoRepository.findById(id);
+        // if (!produto.get().getCategorias().isEmpty())
+        // throw new RuntimeException("Não posso fazer isso fera, existem produtos
+        // dentro dessa categoria");
+
+        // produtoRepository.delete(produto.orElseThrow(() -> new
+        // ObjectNotFoundException("Deu pau")));
         Produto produto = buscaPorId(id);
         produtoRepository.delete(produto);
     }
 
     public Produto update(Produto produtoASerAtualizado) {
-        Produto produtoAtualizado = produtoRepository.save(produtoASerAtualizado);
         return produtoRepository.save(produtoASerAtualizado);
     }
 

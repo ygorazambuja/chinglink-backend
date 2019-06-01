@@ -76,12 +76,7 @@ public class ProdutoResource {
     @DeleteMapping(path = "/{id}")
     public ResponseEntity<?> deletarProdutoPorId(@PathVariable("id") Integer id) {
         produtoService.deletarPorId(id);
-        Produto produto = produtoService.buscaPorId(id);
-        if (produto != null) {
-            return ResponseEntity.ok().body("Produto Deletado !");
-        } else {
-            return ResponseEntity.ok().body("Produto não existe mais na base de dados");
-        }
+        return ResponseEntity.noContent().build();
     }
 
     @PutMapping

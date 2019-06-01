@@ -34,7 +34,6 @@ public class CategoriaResourceTest {
         mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
     }
 
-    @Test
     public void categoriaPorPorId() throws Exception {
         Categoria categoria = new Categoria(2, "Escritório");
         String jsonRequest = objectMapper.writeValueAsString(categoria);
